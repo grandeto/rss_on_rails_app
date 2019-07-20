@@ -23,7 +23,11 @@ default: &default
 
 development:
   <<: *default
-  database: rss_on_rails_app_development
+  database: <%= ENV['RSS_ON_RAILS_APP_DEVELOPMENT_DATABASE_NAME'] %>
+  username: <%= ENV['RSS_ON_RAILS_APP_DEVELOPMENT_DATABASE_USERNAME'] %>
+  password: <%= ENV['RSS_ON_RAILS_APP_DEVELOPMENT_DATABASE_PASSWORD'] %>
+  host: <%= ENV['RSS_ON_RAILS_APP_DEVELOPMENT_DATABASE_HOST'] %>
+  port: <%= ENV['RSS_ON_RAILS_APP_DEVELOPMENT_DATABASE_PORT'] %>
 
   # The specified database role being used to connect to postgres.
   # To create additional roles in postgres see `$ createuser --help`.
@@ -57,7 +61,11 @@ development:
 # Do not set this db to the same as development or production.
 test:
   <<: *default
-  database: rss_on_rails_app_test
+  database: <%= ENV['RSS_ON_RAILS_APP_TEST_DATABASE_NAME'] %>
+  username: <%= ENV['RSS_ON_RAILS_APP_TEST_DATABASE_USERNAME'] %>
+  password: <%= ENV['RSS_ON_RAILS_APP_TEST_DATABASE_PASSWORD'] %>
+  host: <%= ENV['RSS_ON_RAILS_APP_TEST_DATABASE_HOST'] %>
+  port: <%= ENV['RSS_ON_RAILS_APP_TEST_DATABASE_PORT'] %>
 
 # As with config/secrets.yml, you never want to store sensitive information,
 # like your database password, in your source code. If your source code is
