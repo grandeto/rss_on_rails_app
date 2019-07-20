@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Rss Sources</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Url</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @rss_sources.each do |rss_source| %>
+      <tr>
+        <td><%= rss_source.name %></td>
+        <td><%= rss_source.url %></td>
+        <td><%= link_to 'Show', rss_source %></td>
+        <td><%= link_to 'Edit', edit_rss_source_path(rss_source) %></td>
+        <td><%= link_to 'Destroy', rss_source, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Rss Source', new_rss_source_path %>
