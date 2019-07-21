@@ -5,3 +5,4 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+RssSource.create([{ name: 'InfoQ Microservices', url: 'https://feed.infoq.com/microservices/' }, { name: 'InfoQ Enterprise Architecture', url: 'https://feed.infoq.com/enterprise-architecture/' }])
