@@ -3,6 +3,8 @@ git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
 ruby '2.6.3'
 
+# Date validator
+gem 'date_validator'
 # A feed parsing library
 gem 'feedjira'
 # Simple, Heroku-friendly Rails app configuration using ENV and a single YAML file

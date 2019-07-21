@@ -75,6 +75,9 @@ GEM
     concurrent-ruby (1.1.5)
     connection_pool (2.2.2)
     crass (1.0.4)
+    date_validator (0.9.0)
+      activemodel
+      activesupport
     erubi (1.8.0)
     execjs (2.7.0)
     faraday (0.15.2)
@@ -221,6 +224,7 @@ DEPENDENCIES
   capybara (>= 2.15)
   chromedriver-helper
   coffee-rails (~> 4.2)
+  date_validator
   feedjira
   figaro
   jbuilder (~> 2.5)
