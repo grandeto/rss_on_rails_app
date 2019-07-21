@@ -17,15 +17,23 @@ class FetchRssWorker
         next count
       end
 
-      entries_to_save = raw_feed.entries.reject do |entry|
+      entries_ready_to_save = raw_feed.entries.reject do |entry|
         RssArticle.where(url: entry.url).exists?
       end
 
-      entries_to_save.map do |entry|
+      entries_to_save = 0
+
+      entries_ready_to_save.map do |entry|
+        if !entry.last_modified
+          next
+        end
+
+        entry.sanitize!
         ArticleBuilder.build(entry, source)
+        entries_to_save += 1
       end
 
-      count + entries_to_save.size
+      count + entries_to_save
     end
   end
 end

@@ -6,9 +6,9 @@ require 'prop_fetcher'
 class ArticleBuilder
   # Feedjira::Parser::RSSEntry => Article
   ARTICLE_MAP = {
-    'entry_id' => 'ext_article_id',
     'title' => 'title',
-    'url' => 'url'
+    'url' => 'url',
+    'last_modified' => 'published_at'
   }
 
   def self.build(feedjira_entry, source)

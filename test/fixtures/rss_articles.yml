@@ -2,12 +2,12 @@
 
 one:
   rss_source: one
-  ext_article_id: 1
-  title: MyString
-  url: MyString
+  title: MyString1
+  url: https://test.com
+  published_at: "2019-06-24 15:00:00"
 
 two:
   rss_source: two
-  ext_article_id: 1
-  title: MyString
-  url: MyString
+  title: MyString2
+  url: https://test.net
+  published_at: "2019-06-24 15:00:01"
