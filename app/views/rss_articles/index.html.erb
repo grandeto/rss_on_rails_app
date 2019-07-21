@@ -1,0 +1,27 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Articles Feed</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Source</th>
+      <th>Title</th>
+      <th>Action</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @rss_articles.each do |rss_article| %>
+      <tr>
+        <td><%= rss_article.rss_source.name %></td>
+        <td>
+          <a href="<%= rss_article.url %>" target="_blank" rel="noopener noreferrer">
+            <%= rss_article.title %>
+          </a>
+        </td>
+        <td><%= link_to 'Delete', rss_article, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>

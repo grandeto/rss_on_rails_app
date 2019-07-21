@@ -10,10 +10,20 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_07_20_230957) do
+ActiveRecord::Schema.define(version: 2019_07_21_004110) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "rss_articles", force: :cascade do |t|
+    t.bigint "rss_source_id"
+    t.integer "ext_article_id"
+    t.string "title"
+    t.string "url"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["rss_source_id"], name: "index_rss_articles_on_rss_source_id"
+  end
 
   create_table "rss_sources", force: :cascade do |t|
     t.string "name"
@@ -22,4 +32,5 @@ ActiveRecord::Schema.define(version: 2019_07_20_230957) do
     t.datetime "updated_at", null: false
   end
 
+  add_foreign_key "rss_articles", "rss_sources"
 end
