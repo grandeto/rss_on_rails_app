@@ -56,7 +56,7 @@ class RssSourcesController < ApplicationController
   def destroy
     @rss_source.destroy
     respond_to do |format|
-      format.html { redirect_to rss_sources_url, notice: 'Rss source was successfully destroyed.' }
+      format.html { redirect_to rss_sources_url, notice: 'Rss source was successfully deleted.' }
       format.json { head :no_content }
     end
   end

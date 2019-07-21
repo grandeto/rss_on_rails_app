@@ -40,6 +40,6 @@ class RssSourcesTest < ApplicationSystemTestCase
       click_on "Destroy", match: :first
     end
 
-    assert_text "Rss source was successfully destroyed"
+    assert_text "Rss source was successfully deleted"
   end
 end
