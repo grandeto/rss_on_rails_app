@@ -4,7 +4,7 @@ class RssArticlesController < ApplicationController
   # GET /rss_articles
   # GET /rss_articles.json
   def index
-    @rss_articles = RssArticle.all
+    @rss_articles = RssArticle.order('rss_articles.created_at DESC').all
   end
 
   # DELETE /rss_articles/1
