@@ -2,7 +2,6 @@
 
 # Fetch Rss Feeds Worker
 class FetchRssWorker
-  include Sidekiq::Worker
   delegate :logger, to: Rails
 
   def perform
