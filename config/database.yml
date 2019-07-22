@@ -88,6 +88,8 @@ test:
 #
 production:
   <<: *default
-  database: rss_on_rails_app_production
-  username: rss_on_rails_app
-  password: <%= ENV['RSS_ON_RAILS_APP_DATABASE_PASSWORD'] %>
+  database: <%= ENV['RSS_ON_RAILS_APP_PRODUCTION_DATABASE_NAME'] %>
+  username: <%= ENV['RSS_ON_RAILS_APP_PRODUCTION_DATABASE_USERNAME'] %>
+  password: <%= ENV['RSS_ON_RAILS_APP_PRODUCTION_DATABASE_PASSWORD'] %>
+  host: <%= ENV['RSS_ON_RAILS_APP_PRODUCTION_DATABASE_HOST'] %>
+  port: <%= ENV['RSS_ON_RAILS_APP_PRODUCTION_DATABASE_PORT'] %>
