@@ -5,7 +5,7 @@
 
 # Example:
 #
-set :output, "/home/grandeto/rss_on_rails_app/log/cron_log.log"
+# set :output, "/path/to/my/cron_log.log"
 #
 # every 2.hours do
 #   command "/usr/bin/some_great_command"
