@@ -1,24 +1,20 @@
-# README
+# Rss On Rails - Simple RSS Feeder
+## Pre Requirements: Ruby 2.6.3, Ruby on Rails 5.2.3, PostgreSQL 11.4
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+### Installation & Configuration
 
-Things you may want to cover:
+* Create ```config/application.yml``` or Rename ```config/application.yml.example``` to ```application.yml``` and set there your env variables
 
-* Ruby version
+* Delete ```config/credentials.yml.enc```
 
-* System dependencies
+* Generate new credentials: 
+```EDITOR="nano" bin/rails credentials:edit```
 
-* Configuration
+* ```bundle install```
 
-* Database creation
+* ```rake db:setup```
 
-* Database initialization
+* Create Feeds updating cron
+```whenever --update-crontab```
 
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+* ```rails server```
