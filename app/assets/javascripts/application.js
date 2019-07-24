@@ -14,3 +14,7 @@
 //= require activestorage
 //= require turbolinks
 //= require_tree .
+//= require jquery.min
+//= require skel.min
+//= require util
+//= require main
