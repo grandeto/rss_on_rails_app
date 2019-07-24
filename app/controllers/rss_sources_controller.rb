@@ -1,3 +1,6 @@
+# frozen_string_literal: true
+
+# Rss Sources Controller
 class RssSourcesController < ApplicationController
   before_action :set_rss_source, only: [:show, :edit, :update, :destroy]
 

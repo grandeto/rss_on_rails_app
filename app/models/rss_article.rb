@@ -1,3 +1,6 @@
+# frozen_string_literal: true
+
+# Article Entity
 class RssArticle < ApplicationRecord
   belongs_to :rss_source
   validates :rss_source_id, presence: true, numericality: true
