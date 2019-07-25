@@ -1,9 +1,5 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
 one:
-  name: MyString
-  url: MyString
-
-two:
-  name: MyString
-  url: MyString
+  name: InfoQ News
+  url: https://feed.infoq.com/news/

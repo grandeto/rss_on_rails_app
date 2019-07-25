@@ -7,13 +7,13 @@ class RssArticlesTest < ApplicationSystemTestCase
 
   test "visiting the index" do
     visit rss_articles_url
-    assert_selector "h1", text: "Articles Feed"
+    assert_selector "h1", text: "Articles"
   end
 
   test "destroying a Rss article" do
     visit rss_articles_url
     page.accept_confirm do
-      click_on "Destroy", match: :first
+      click_on "Delete", match: :first
     end
 
     assert_text "Rss article was successfully deleted"

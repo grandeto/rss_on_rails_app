@@ -20,7 +20,8 @@ class RssSourcesControllerTest < ActionDispatch::IntegrationTest
       post rss_sources_url, params: { rss_source: { name: @rss_source.name, url: @rss_source.url } }
     end
 
-    assert_redirected_to rss_source_url(RssSource.last)
+    assert_redirected_to rss_source_path(RssSource.last)
+    assert_equal 'Rss source was successfully created.', flash[:notice]
   end
 
   test "should show rss_source" do

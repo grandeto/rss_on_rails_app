@@ -12,7 +12,7 @@ class RssSourcesTest < ApplicationSystemTestCase
 
   test "creating a Rss source" do
     visit rss_sources_url
-    click_on "New Rss Source"
+    click_on "Add New Rss Source"
 
     fill_in "Name", with: @rss_source.name
     fill_in "Url", with: @rss_source.url
@@ -37,7 +37,7 @@ class RssSourcesTest < ApplicationSystemTestCase
   test "destroying a Rss source" do
     visit rss_sources_url
     page.accept_confirm do
-      click_on "Destroy", match: :first
+      click_on "Delete", match: :first
     end
 
     assert_text "Rss source was successfully deleted"
