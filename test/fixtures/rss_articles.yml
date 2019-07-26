@@ -5,4 +5,3 @@ one:
   title: MyString1
   url: https://test.com
   published_at: "2019-06-24 15:00:00"
-  rss_source: one
